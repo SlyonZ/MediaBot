@@ -1,15 +1,18 @@
+const Discord = require("discord.js");
 exports.run = function(client, message, args) {
-  let messagecount = parseInt(args.join(' '));
-  message.channel.fetchMessages({
-    limit: messagecount
-  }).then(messages => message.channel.bulkDelete(messages));
-};
+  
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu n'as pas les droits pour éxécuter cette commande !");
+  if(!args[0]) return message.channel.send("Indiquez une valeur !");
+  message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
+  });
+}
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 2
+  permLevel: 0
 };
 
 exports.help = {
@@ -17,3 +20,8 @@ exports.help = {
   description: 'Clear les messages du channel !',
   usage: 'purge <nombre>'
 };
+
+
+  
+
+

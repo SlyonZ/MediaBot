@@ -6,7 +6,7 @@ exports.run = function(client, message, args) {
   .setColor('RANDOM')
   .setAuthor('Liste des commandes :')
   .addField(':rotating_light: Administration', '`.purge` `.report`')
-  .addField(':video_game: Fun', '`.roll` `.8ball` `.say` `.coin` `.google` `.bank` `.pay`')
+  .addField(':video_game: Fun', '`.roll` `.8ball` `.say` `.coin` `.google`')
   .addField(':newspaper: Infos',' `.ping` `.help` `.profile` `.avatar`')
   .setTimestamp()
 

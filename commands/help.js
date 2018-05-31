@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
   .setAuthor('Liste des commandes :')
   .addField(':rotating_light: Administration', '`.purge` `.report`')
   .addField(':video_game: Fun', '`.roll` `.8ball` `.say` `.coin` `.google` `.cat` `.tb` `.kiss` `.shifumi`')
-  .addField(':newspaper: Infos',' `.ping` `.help` `.profile` `.avatar`')
+  .addField(':newspaper: Infos',' `.ping` `.help` `.profile` `.avatar` `.annonces`')
   .setTimestamp()
 
               message.channel.send(msg)

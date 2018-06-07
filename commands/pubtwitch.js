@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 
   message.delete()
   message.channel.send({embed});
-  message.channel.send("<@&451258312575549440>");
+  message.channel.send("");
   }
 
 

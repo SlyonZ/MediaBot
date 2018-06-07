@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
+  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'as pas les droits pour éxécuter cette commande !");
   let text = message.content.split(" ").slice(1);
 
   let roleAnnonces = message.guild.roles.find("name", "annonces");
@@ -27,7 +28,7 @@ exports.run = (client, message, args) => {
       enabled: true,
       guildOnly: false,
       aliases: [],
-      permLevel: 2
+      permLevel: 0
     };
 
     exports.help = {

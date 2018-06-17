@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
-
-
-
+  
+  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'as pas les droits pour éxécuter cette commande !");
   let roleAnnonces = message.guild.roles.find("name", "annonces");
 
   const embed = new Discord.RichEmbed()

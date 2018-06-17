@@ -10,11 +10,11 @@ exports.run = (client, message, args) => {
 
   .setColor(0xFF0000)
   .setFooter("Bon visionnage ! ", "https://imgur.com/rDyK8BU.png")
-  .setImage("https://i.imgur.com/DkXCftA.png")
+  .setImage("https://i.imgur.com/kam74fM.png")
 
   .setTimestamp()
 
-  .addField("Lien de la vidéo :", "https://www.youtube.com/watch?v=anmggl_CplA", true);
+  .addField("Lien de la vidéo :", "https://www.youtube.com/watch?v=0LmgfTTmgm8", true);
 
   message.delete()
   message.channel.send({embed});
